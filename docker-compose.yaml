@@ -10,8 +10,8 @@ services:
       - PORT=8080
       - DATABASE_NAME=test
       - DATABASE_HOST=db
-      - DATABASE_USER=DATABASE_USER
-      - DATABASE_PASSWORD=DATABASE_USER
+      - DATABASE_USER=test
+      - DATABASE_PASSWORD=test
 
   db:
     image: postgres:14
