@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    image: client:0.0.1
+    build: ./SumPractBackV1
+    depends_on:
+      - db
+    environment:
+      - PORT=8080
+      - DATABASE_NAME=test
+      - DATABASE_HOST=db
+      - DATABASE_USER=DATABASE_USER
+      - DATABASE_PASSWORD=DATABASE_USER
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
+    ports:
+      - "15432:5432"
+    restart: always
+
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   restart: always
