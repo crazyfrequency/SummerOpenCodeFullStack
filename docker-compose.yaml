@@ -23,8 +23,14 @@ services:
       - "15432:5432"
     restart: always
 
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #   restart: always
+  frontend:
+    build: ./summer-open-code-frontend
+    restart: always
+
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: always

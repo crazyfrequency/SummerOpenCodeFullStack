@@ -1,3 +1,6 @@
 [submodule "SumPractBackV1"]
 	path = SumPractBackV1
 	url = https://github.com/EliseevIlya/SumPractBackV1
+[submodule "summer-open-code-frontend"]
+	path = summer-open-code-frontend
+	url = https://github.com/crazyfrequency/summer-open-code-frontend
