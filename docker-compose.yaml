@@ -25,6 +25,8 @@ services:
 
   frontend:
     build: ./summer-open-code-frontend
+    environment:
+      - NEXT_PUBLIC_API=/api
     restart: always
 
   nginx:
